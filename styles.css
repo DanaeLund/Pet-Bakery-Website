@@ -100,6 +100,8 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
+    padding-block: 1.5rem;
 
 }
 
@@ -128,6 +130,16 @@ section {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--header-text-color);
+
+    
+    transition: all 0.5s;
+}
+
+.hero-cta-button:hover {
+    background-color: var(--secondary-color);
+
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .review-rating {
@@ -141,10 +153,26 @@ section {
 .review-rating p {
     font-size: 1rem;
     font-weight: bold;
+    padding-block: 0.5rem;
 }
 
 .review-img {
     width: 10rem;
+}
+
+.hero-section-img-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.hero-img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 100%;
+    border: var(--secondary-color) 6px solid;
+    object-fit: cover;
 }
 
 /* Newsletter Section */
