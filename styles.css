@@ -162,7 +162,6 @@ a:hover {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--header-text-color);
-
     
     transition: all 0.5s;
 }
@@ -316,7 +315,9 @@ a:hover {
 
 .review-review {
     padding-block: 1.5rem;
+}
 
+.review-review p {
     text-align: center; 
     font-size: 1.25rem; 
     font-weight: bolder; 
