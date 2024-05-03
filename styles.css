@@ -10,7 +10,7 @@
     --header-text-color: #ffffff;
     
     --background-color: #ffffff;
-    --header-background-color: #F4B3C4;
+    --header-background-color: #E9829F;
 
     --test-color: yellow;
 }
@@ -95,6 +95,20 @@ section {
     background-color: var(--primary-color);
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-color-hover);
+    text-decoration: none;
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -141,6 +155,8 @@ section {
     transform: scale(1.1);
     transition: all 0.5s;
 }
+
+/* Review Section */
 
 .review-rating {
     display: flex;
@@ -232,19 +248,23 @@ section {
     color: var(--text-color);
 }
 
-ul {
-    list-style-type: none;
+/* Hightlight Section */
+
+.section-3-content h2, h3{
+    text-align: center;
+    color: var(--dark-accent-color);
 }
 
-a {
-    color: var(--link-color);
-    text-decoration: none;
+h3 {
+    font-size: 2rem;
 }
 
-a:hover {
-    color: var(--link-color-hover);
-    text-decoration: none;
+.highlight-img {
+    width: 20rem;
+    height: 20rem;
 }
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -280,6 +300,8 @@ footer span a{
 
     color: var(--header-text-color);
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
     width: 10px;
