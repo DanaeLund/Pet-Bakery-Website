@@ -308,8 +308,19 @@ a:hover {
     text-align: left;
 }
 
-.reviews-section img {
+.review-review img {
     width: 10rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+.review-review {
+    padding-block: 1.5rem;
+
+    text-align: center; 
+    font-size: 1.25rem; 
+    font-weight: bolder; 
+    color: #E9829F
 }
 
 .reviews-cta-button {
