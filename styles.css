@@ -7,6 +7,7 @@
     --link-color-hover: #E9829F;
 
     --text-color: #000000;
+    --alt-text-color: #ffffff;
     --header-text-color: #ffffff;
     
     --background-color: #ffffff;
@@ -21,24 +22,40 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    width: 100%;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    width: calc(100vw - 10px);
+
+    font-family: 'Roboto', sans-serif;
+
+    overflow-x: hidden;
 }
 
 /* Header */
 
 header {
     min-width:  914px;
+    width: 100%;
 
     background-color: var(--header-background-color);
 
     color: var(--header-text-color);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 4.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .nav-bar {
@@ -47,7 +64,7 @@ h2 {
     align-items: center;
 
     width: 100%;
-    height: 225px;
+    height: 180px;
 }
 
 .nav-links {
@@ -67,8 +84,8 @@ h2 {
     justify-content: center;
     align-items: center;
 
-    width: 190px;
-    height: 190px;
+    width: 150px;
+    height: 150px;
     background-color: var( --secondary-color);
     border-radius: 50%;
 }
@@ -79,6 +96,10 @@ h2 {
     align-items: center;
     padding-inline: 10rem;
     padding-block: 0.5rem;
+
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: var(--alt-text-color);
     
     background-color: var(--secondary-color);
 }
@@ -87,10 +108,6 @@ h2 {
 section {
     display: flex;
     flex-direction: column;
-    min-height: 5rem;
-    
-    padding-inline: 10rem;
-    padding-block: 0.5rem;
 
     background-color: var(--primary-color);
 }
@@ -100,7 +117,7 @@ ul {
 }
 
 a {
-    color: var(--link-color);
+    color: var(--alt-text-color);
     text-decoration: none;
 }
 
@@ -114,9 +131,10 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    padding-block: 1.5rem;
+    align-items: center;
 
+    padding-top: 4rem;
+    padding-inline: 12rem;
 }
 
 .section-text-content {
@@ -156,9 +174,7 @@ a:hover {
     transition: all 0.5s;
 }
 
-/* Review Section */
-
-.review-rating {
+.hero-section .review-rating {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,13 +182,13 @@ a:hover {
     width: 15rem;
 }
 
-.review-rating p {
+.hero-section .review-rating p {
     font-size: 1rem;
     font-weight: bold;
     padding-block: 0.5rem;
 }
 
-.review-img {
+.hero-section .review-img {
     width: 10rem;
 }
 
@@ -180,22 +196,164 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 30rem;
 }
 
 .hero-section-img-content img {
     width: 25rem;
     height: 25rem;
     border-radius: 100%;
-    border: var(--secondary-color) 6px solid;
+    border: var(--secondary-color) 0.5rem solid;
     object-fit: cover;
 }
 
-/* Newsletter Section */
+/* Best Sellers Section */
 
-.newsletter {
-    padding: 0;
+.best-sellers-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-inline: 10rem;
+    padding-block: 4rem;
 }
+
+.best-sellers-content h2 {
+    text-align: center;
+
+    color: var(--dark-accent-color);
+}
+
+/* Hightlight Section */
+
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-inline: 4rem;
+}
+
+.hightlight-table td {
+    padding-inline: 1rem;
+}
+
+.highlight-content h2 {
+    text-align: center;
+}
+
+.highlight-content h3 {
+    text-align: center;
+    color: var(--dark-accent-color);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.image-row img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.title-row h3 {
+    text-align: center;
+    max-width: 25rem;
+}
+
+.title-row {
+    align-items: center;
+}
+
+.description-row p {
+    text-align: center;
+    font-weight: bold;
+
+    max-width: 20rem;
+}
+
+/* Reviews Section */
+
+.reviews-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    padding-block: 5rem;
+    padding-inline: 12rem;
+}
+
+.reviews-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: fit-content;
+    min-width: 500px;
+}
+
+.reviews-img-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--dark-accent-color);
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.reviews-text-content h2 {
+    text-align: left;
+}
+
+.reviews-section img {
+    width: 10rem;
+}
+
+.reviews-cta-button {
+    width: 15rem;    
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    background-color: var(--dark-accent-color);
+    border-radius: 10px;
+    border: none;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--header-text-color);
+    
+    transition: all 0.5s;
+}
+
+.reviews-cta-button:hover {
+    background-color: var(--secondary-color);
+
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.reviews-img-content img {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Socials Section */
+
+.socials-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-inline: 10rem;
+    padding-block: 4rem;
+}
+
+/* Newsletter Section */
 
 .newsletter-content {
     display: flex;
@@ -203,10 +361,16 @@ a:hover {
     justify-content: center;
     align-items: center;
 
+    padding-inline: 10rem;
     padding-block: 4rem;
     background-color: var( --header-background-color);
 
     color: var(--header-text-color);
+}
+
+.newsletter-content p {
+    text-align: center;
+    width: 75%;
 }
 
 .newsletter-content form {
@@ -241,34 +405,22 @@ a:hover {
 
     border: var(--background-color) 1px solid;
     background-color: var(--secondary-color);
+
+    transition: all 0.5s;
 }
 
 .newsletter-content form button:hover {
     background-color: var(--background-color);
     color: var(--text-color);
-}
 
-/* Hightlight Section */
-
-.section-3-content h2, h3{
-    text-align: center;
-    color: var(--dark-accent-color);
-}
-
-h3 {
-    font-size: 2rem;
-}
-
-.highlight-img {
-    width: 20rem;
-    height: 20rem;
+    transition: all 0.5s;
 }
 
 /* Footer */
 
 footer {
     width: 100%;
-    min-width: 1200px;
+    min-width: 900px;
 }
 
 .footer-text {
