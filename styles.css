@@ -218,10 +218,62 @@ a:hover {
     padding-block: 4rem;
 }
 
+.best-sellers-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+}
+
+.best-sellers-card {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--dark-accent-color);
+
+    text-align: center;
+    color: var(--header-text-color);
+}
+
+.best-sellers-card h3 {
+    padding-top: 1rem;
+}
+
 .best-sellers-content h2 {
     text-align: center;
-
     color: var(--dark-accent-color);
+
+    padding-bottom: 2.5rem;
+}
+
+.best-sellers-card img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+
+.best-sellers-cta-button {
+    min-width: 15rem;   
+    margin-top: 2rem; 
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    background-color: var(--dark-accent-color);
+    border-radius: 10px;
+    border: none;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--header-text-color);
+
+    transition: all 0.5s;
+}
+
+.best-sellers-cta-button:hover {
+    background-color: var(--secondary-color);
+
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 /* Hightlight Section */
@@ -362,7 +414,7 @@ a:hover {
     align-items: center;
     
     padding-inline: 10rem;
-    padding-block: 4rem;
+    padding-bottom: 4rem;
 }
 
 /* Newsletter Section */
